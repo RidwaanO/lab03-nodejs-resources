@@ -14,4 +14,6 @@ app.get('/', (req, res) => {
 app.get('/contacts', (req, res) => {
     res.render('contacts');
    });
-   
+//pass requests to the router middleware
+const router = require('./apis/routes');
+app.use(router);
